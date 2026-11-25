@@ -1,0 +1,13 @@
+--- node_modules/react-native-video/android/src/main/java/com/brentvatne/exoplayer/VideoPlaybackService.kt
++++ node_modules/react-native-video/android/src/main/java/com/brentvatne/exoplayer/VideoPlaybackService.kt
+@@ -99,10 +99,6 @@
+ 
+     override fun onDestroy() {
+         cleanup()
+-        val notificationManager: NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+-            notificationManager.deleteNotificationChannel(NOTIFICATION_CHANEL_ID)
+-        }
+         super.onDestroy()
+     }
+ 
